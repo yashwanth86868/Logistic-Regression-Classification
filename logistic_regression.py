@@ -86,6 +86,24 @@ auc_score
 fpr,tpr, thresholds = roc_curve(y_test,y_pred_prob)
 
 
+import os
+
+from pathlib import Path
+
+project_path = Path(__file__).resolve().parent
+dataset_folder = project_path / "dataset"/"images"
+dataset_folder.mkdir(parents=True, exist_ok=True)
+
+image_path = dataset_folder / "roc_curve.png"
+
+
+os.makedirs("dataset/images", exist_ok=True)
+
+
+
+
+
+
 plt.figure(figsize = (8,6))
 plt.plot(fpr,tpr, label = f'Logistic Regression (AUC =  {auc_score:.2f})')
 plt.plot([0,1], [0,1],  'k--')
@@ -94,8 +112,32 @@ plt.ylabel('True positive Rate')
 plt.title('ROC Curve')
 plt.legend(loc = 'lower right')
 plt.grid()
-plt.show()
 
 
-plt.savefig("dataset/images/roc_curve.png", dpi=300, bbox_inches="tight")
+
+
+
+
+
+
+
+
+
+
+
+
+    
+plt.savefig(
+        
+        "dataset/images/roc_curve.png",
+        dpi = 300,
+        bbox_inches= 'tight'
+        
+        
+    )
 plt.show()
+print("ROC curve saved successfully in the 'images' folder.")
+
+
+
+    

@@ -261,3 +261,8 @@ if st.session_state.get("trained", False):
 
 st.divider()
 st.caption("Built with Python, Scikit-learn and Streamlit")
+
+
+
+plt.grid()
+plt.show()
