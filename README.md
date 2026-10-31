@@ -51,7 +51,7 @@ python logistic_regression.py
 
 ## ROC Curve
 
-![ROC Curve](images/roc_curve.png)
+![ROC Curve](dataset/images/roc_curve.png)
 
 ## Author
 
